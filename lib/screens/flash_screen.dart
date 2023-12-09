@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'welcome_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   @override
@@ -15,7 +16,7 @@ class _SplashScreenState extends State<SplashScreen> {
     Timer(Duration(seconds: 2), () {
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => HomeScreen()),
+        MaterialPageRoute(builder: (context) => WelcomeScreen()),
       );
     });
   }
@@ -24,22 +25,22 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Image.asset('assets/images/splash.png'),
+        child: Image.asset('assets/app_logo.jpg'),
       ),
     );
   }
 }
 
-class HomeScreen extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Home Screen'),
-      ),
-      body: Center(
-        child: Text('Welcome to the App!'),
-      ),
-    );
-  }
-}
+// class HomeScreen extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       appBar: AppBar(
+//         title: Text('Home Screen'),
+//       ),
+//       body: Center(
+//         child: Text('Welcome to the App!'),
+//       ),
+//     );
+//   }
+// }
