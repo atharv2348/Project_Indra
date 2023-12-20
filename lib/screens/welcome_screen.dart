@@ -20,7 +20,7 @@ class WelcomeScreen extends StatelessWidget {
           children: [
             FlutterLogo(
               size: 100.0, // Adjust the size of the logo
-              colors: Colors.white, // Set logo color
+              // color: Colors.white, // Set logo color
             ),
             SizedBox(height: 16.0),
             Text(
