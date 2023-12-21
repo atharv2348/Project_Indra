@@ -71,9 +71,8 @@ class _MainScreenState extends State<MainScreen> {
               ),
               label: ''),
           BottomNavigationBarItem(
-
               icon: GestureDetector(
-                onTap: () {
+                onTap: (){
                   setState(() {
                     bodyWidget = Location();
                   });
