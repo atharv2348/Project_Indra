@@ -25,7 +25,7 @@ class WelcomeScreen extends StatelessWidget {
             ),
             SizedBox(height: 16.0),
             Text(
-              'Welcome to My App',
+              'Welcome to Team Indra App',
               style: TextStyle(
                 color: Colors.white, // Set text color
                 fontSize: 24.0, // Set text size
