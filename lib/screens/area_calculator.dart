@@ -40,11 +40,20 @@ class _AreaCalculatorState extends State<AreaCalculator> {
               SizedBox(
                 height: screenHeight * 0.01,
               ),
-              customTextField(kcontroller: lengthController,hintText: "Length"),
-              customTextField(kcontroller: breadthController,hintText: "Breadth"),
-              Center(child: ElevatedButton(onPressed: (){
-                print("${lengthController.text}, ${breadthController.text}");
-              }, child: Text("Calculate"),)),
+              customTextField(
+                  kcontroller: lengthController, hintText: "Length"),
+              customTextField(
+                  kcontroller: breadthController, hintText: "Breadth"),
+              Center(
+                  child: ElevatedButton(
+                onPressed: () {
+                  print("${lengthController.text}, ${breadthController.text}");
+                },
+                child: Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: Text("Calculate", style: TextStyle(fontSize: 20)),
+                ),
+              )),
               SizedBox(
                 height: screenHeight * 0.05,
               ),
@@ -83,7 +92,14 @@ class _AreaCalculatorState extends State<AreaCalculator> {
   TextStyle smallbody() =>
       GoogleFonts.poppins(fontSize: 18, fontWeight: FontWeight.w500);
 
-  Padding customTextField({required final TextEditingController kcontroller ,required final hintText , final icon = const Icon(Icons.search, color: Color(0xFF638787),)}) => Padding(
+  Padding customTextField(
+          {required final TextEditingController kcontroller,
+          required final hintText,
+          final icon = const Icon(
+            Icons.search,
+            color: Color(0xFF638787),
+          )}) =>
+      Padding(
         padding: const EdgeInsets.all(20.0),
         child: TextField(
           controller: kcontroller,
