@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sapling_app/screens/main_screen.dart';
 
 class MyApp extends StatelessWidget {
   @override
@@ -24,7 +25,7 @@ class WelcomeScreen extends StatelessWidget {
             ),
             SizedBox(height: 16.0),
             Text(
-              'Welcome to My App',
+              'Welcome to Team Indra App',
               style: TextStyle(
                 color: Colors.white, // Set text color
                 fontSize: 24.0, // Set text size
@@ -34,6 +35,8 @@ class WelcomeScreen extends StatelessWidget {
             SizedBox(height: 16.0),
             ElevatedButton(
               onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => MainScreen()));
                 // Add your navigation logic here
                 print('Get Started button pressed');
               },
