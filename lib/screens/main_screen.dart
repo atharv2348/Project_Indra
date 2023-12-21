@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sapling_app/screens/area_calculator.dart';
 import 'package:sapling_app/screens/fertiizer_recommendation.dart';
+import 'package:sapling_app/screens/location.dart';
 import 'package:sapling_app/screens/soil_type.dart';
 
 class MainScreen extends StatefulWidget {
@@ -61,9 +62,16 @@ class _MainScreenState extends State<MainScreen> {
               ),
               label: ''),
           BottomNavigationBarItem(
-              icon: Icon(
-                Icons.location_on_outlined,
-                color: Colors.black,
+              icon: GestureDetector(
+                onTap: (){
+                  setState(() {
+                    bodyWidget = Location();
+                  });
+                },
+                child: Icon(
+                  Icons.location_on_outlined,
+                  color: Colors.black,
+                ),
               ),
               label: ''),
           BottomNavigationBarItem(
