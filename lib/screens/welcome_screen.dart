@@ -14,23 +14,42 @@ class WelcomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blue, // Set your desired background color
+      backgroundColor: Colors.black, // Set your desired background color
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            FlutterLogo(
-              size: 100.0, // Adjust the size of the logo
-              // color: Colors.white, // Set logo color
+            Image.asset(
+              'assets/app_logo.jpg',
+              scale: 2,
             ),
-            SizedBox(height: 16.0),
-            Text(
-              'Welcome to Team Indra App',
-              style: TextStyle(
-                color: Colors.white, // Set text color
-                fontSize: 24.0, // Set text size
-                fontWeight: FontWeight.bold, // Set text weight
-              ),
+            const SizedBox(height: 16.0),
+             const Text(
+                  'Welcome to ',
+                  style: TextStyle(
+                    color: Colors.white, // Set text color
+                    fontSize: 22.0, // Set text size
+                  ),
+                ),
+            const Wrap(
+              children: [
+               
+                Text(
+                  'Indra Agro Tech ',
+                  style: TextStyle(
+                    color: Color(0xFF51b225), // Set text color
+                    fontSize: 22.0, // Set text size
+                    fontWeight: FontWeight.w900, // Set text weight
+                  ),
+                ),
+                Text(
+                  'App',
+                  style: TextStyle(
+                    color: Colors.white, // Set text color
+                    fontSize: 22.0, // Set text size
+                  ),
+                ),
+              ],
             ),
             SizedBox(height: 16.0),
             ElevatedButton(
